@@ -7,13 +7,7 @@ echo "    \ \ |_   _ \ / _ \  _ \| __/ _  | ´__´ |/ _ \/ __| /   \ | |\/| || |
 echo "/\__/ / | | | | |  __/ | | | || (_| | |  | | (_) \__ \/ /^\ \| |  | || |____"
 echo "\____/|_| |_| |_|\___|_| |_|\__\__,_|_|  |_|\___/|___/\/   \/\_|  |_/\_____/"
 
-
 # añadir más archivos a $FILE
-
-FILE=""
-OUTPUT=""
-ABRIR=0
-
 
 function usage {
 	echo -e "Help!: How can I use this:"
@@ -22,7 +16,6 @@ function usage {
 	echo -e "[-o]\tSelecciona la salida del fichero descomentado\t(not required)"
 	exit 0
 }
-
 
 while getopts f:o:h: opt
 do
@@ -51,16 +44,17 @@ fi
 
 N_LINEAS=$(cat $PATH_FILE | wc -l)
 TEMP="$PATH_FILE.temp"
+ABRIR=0
 
 cp $PATH_FILE $TEMP
 
 for i in $(seq 1 $N_LINEAS)
 do
-	if [ $(cat $TEMP | awk 'NR=='$i'{print $0}' | grep "<\!--" | wc -l) -ne 0 ]; then
+	if [[ "$(cat $TEMP | awk 'NR=='$i'{print $0}')" == *"<!--"* ]]; then
 		ABRIR=1
 	fi
 
-	if [ $(cat $TEMP | awk 'NR=='$i'{print $0}' | grep "\-->" | wc -l) -ne 0 ]; then
+	if [[ "$(cat $TEMP | awk 'NR=='$i'{print $0}')" == *"-->"* ]]; then
                 sed -i $i' s/^.*$//' $TEMP
 		ABRIR=0
         fi
