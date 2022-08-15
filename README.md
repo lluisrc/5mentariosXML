@@ -1,9 +1,15 @@
 # 5mentariosXML
-Este script quita los comentarios de los archivos .xml
-Con el parámetro -f indicas que fichero es el objetivo
-Con el parámentro -o indicas que output vas a usar, si no declaras un output, será el mismo archivo archivo que utilizas.
+This script allow you to leave xml comments (`<!--` until `-->`) from xml file
 
-Como usar:
-````
-# 5mentariosXML.sh -f fechero.xml -o /tmp/proba1
-````
+## Startup
+```
+[user@linuxserver ~]$ chmod +x 5mentariosXML.sh
+```
+
+## How to use
+```
+[user@linuxserver ~]$ ./5mentariosXML.sh -f test.xml -o /tmp/test2.xml
+```
+## Help
+[**-f**] *Selecciona el fichero .xml a descomentar.* (required)
+[**-o**] *Selecciona la salida del fichero descomentado.* (optional)
