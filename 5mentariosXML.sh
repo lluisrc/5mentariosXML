@@ -21,8 +21,8 @@ greyColour="\e[0;37m"
 function usage {
 	echo -e "\n${yellowColour}Help!: How can I use this:${endColour}"
 	echo -e "\nFlag\tDescription \t\t\t\t\tIs required?"
-	echo -e "${cianColour}[-f]${endColour}\tSelecciona el fichero .xml a descomentar.\t${greenColour}(required)${endColour}"
-	echo -e "${cianColour}[-o]${endColour}\tSelecciona la salida del fichero descomentado\t${yellowColour}(optional)${endColour}"
+	echo -e "${cianColour}[-f]${endColour}\tSelect tarjet xml file to uncomment.\t${greenColour}(required)${endColour}"
+	echo -e "${cianColour}[-o]${endColour}\tSelect some output to save xml file.\t${yellowColour}(optional)${endColour}"
 	exit 1
 }
 
