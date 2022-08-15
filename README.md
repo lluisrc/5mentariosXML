@@ -8,9 +8,8 @@ This script allow you to leave xml comments (`<!--` until `-->`) from xml file
 ```
 
 ## How to use
+- [**-f**] *Select tarjet xml file to uncomment.* (required)
+- [**-o**] *Select some output to save xml file.* (optional)
 ```
 [user@linuxserver ~]$ ./5mentariosXML.sh -f some.xml -o other.xml
 ```
-## Help
-- [**-f**] *Select tarjet xml file to uncomment.* (required)
-- [**-o**] *Select some output to save xml file.* (optional)
