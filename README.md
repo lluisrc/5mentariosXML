@@ -12,5 +12,5 @@ This script allow you to leave xml comments (`<!--` until `-->`) from xml file
 [user@linuxserver ~]$ ./5mentariosXML.sh -f some.xml -o other.xml
 ```
 ## Help
-- [**-f**] *Selecciona el fichero .xml a descomentar.* (required)
-- [**-o**] *Selecciona la salida del fichero descomentado.* (optional)
+- [**-f**] *Select tarjet xml file to uncomment.* (required)
+- [**-o**] *Select some output to save xml file.* (optional)
