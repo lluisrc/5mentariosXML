@@ -7,14 +7,23 @@ echo "    \ \ |_   _ \ / _ \  _ \| __/ _  | ´__´ |/ _ \/ __| /   \ | |\/| || |
 echo "/\__/ / | | | | |  __/ | | | || (_| | |  | | (_) \__ \/ /^\ \| |  | || |____"
 echo "\____/|_| |_| |_|\___|_| |_|\__\__,_|_|  |_|\___/|___/\/   \/\_|  |_/\_____/"
 
-# Mejoras: añadir más archivos para $FILE
+# añadir más archivos a $FILE
+
+endColour="\e[0m"
+redColour="\e[0;31m"
+greenColour="\e[0;32m"
+yellowColour="\e[0;33m"
+blueColour="\e[0;34m"
+purpleColour="\e[0;35m"
+cianColour="\e[0;36m"
+greyColour="\e[0;37m"
 
 function usage {
-	echo -e "Help!: How can I use this:"
-	echo -e "Flag\tDescription \t\t\t\t\tIs required?"
-	echo -e "[-f]\tSelecciona el fichero .xml a descomentar.\t(required)"
-	echo -e "[-o]\tSelecciona la salida del fichero descomentado\t(not required)"
-	exit 0
+	echo -e "\n${yellowColour}Help!: How can I use this:${endColour}"
+	echo -e "\nFlag\tDescription \t\t\t\t\tIs required?"
+	echo -e "${cianColour}[-f]${endColour}\tSelecciona el fichero .xml a descomentar.\t${greenColour}(required)${endColour}"
+	echo -e "${cianColour}[-o]${endColour}\tSelecciona la salida del fichero descomentado\t${yellowColour}(optional)${endColour}"
+	exit 1
 }
 
 while getopts f:o:h: opt
