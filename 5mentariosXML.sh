@@ -19,9 +19,9 @@ function usage {
 
 while getopts f:o:h: opt
 do
-	case "${opt}" in
-		f) FILE=${OPTARG};;
-		o) OUTPUT=${OPTARG};;
+	case "$opt" in
+		f) FILE=$OPTARG;;
+		o) OUTPUT=$OPTARG;;
 		*) usage
 	esac
 done
