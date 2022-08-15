@@ -7,7 +7,7 @@ echo "    \ \ |_   _ \ / _ \  _ \| __/ _  | ´__´ |/ _ \/ __| /   \ | |\/| || |
 echo "/\__/ / | | | | |  __/ | | | || (_| | |  | | (_) \__ \/ /^\ \| |  | || |____"
 echo "\____/|_| |_| |_|\___|_| |_|\__\__,_|_|  |_|\___/|___/\/   \/\_|  |_/\_____/"
 
-# añadir más archivos a $FILE
+# Mejoras: añadir más archivos para $FILE
 
 function usage {
 	echo -e "Help!: How can I use this:"
